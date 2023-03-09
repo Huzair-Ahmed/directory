@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1> new student entered </h1>
+    
+        <table border="3">
+            <tr>
+                
+                 <th>ID No</th>
+                 <th>Name</th>
+                 <th>Father Name</th>
+                 <th>Semester</th>
+                 <th>Department</th>
+                 <th>CGPA</th>
+            </tr>
+            <tr>
+                <td th:text="${shownewstudent.id}"></td>
+                <td th:text="${shownewstudent.name}"></td>
+                <td th:text="${shownewstudent.fathername}"></td>
+                <td th:text="${shownewstudent.semester}"></td>
+                <td th:text="${shownewstudent.department}"></td>
+                <td th:text="${shownewstudent.cgpa}"></td>  
+            </tr>
+        </table>
+
+     <a th:href="@{enterStudent}">Enter new Student?</a>
+     <br><br>
+     <a th:href="@{registeredStudent}">Student List</a>
+
+</body>
+</html>

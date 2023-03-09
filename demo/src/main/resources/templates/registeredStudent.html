@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Student</title>
+</head>
+<body>
+    
+    <h1>Registered Students</h1>
+
+    <table border="3">
+        <tr>
+            
+             <th>ID No</th>
+             <th>Name</th>
+             <th>Father Name</th>
+             <th>Semester</th>
+             <th>Department</th>
+             <th>CGPA</th>
+        </tr>
+        <tr th:each="student: ${studentlist}">
+            <td th:text="${student.id}"></td>
+            <td th:text="${student.name}"></td>
+            <td th:text="${student.fathername}"></td>
+            <td th:text="${student.semester}"></td>
+            <td th:text="${student.department}"></td>
+            <td th:text="${student.cgpa}"></td>  
+        </tr>
+    </table>
+
+</body>
+</html>
